@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "367751058494",
+    "firebase_url": "https://otppinview.firebaseio.com",
+    "project_id": "otppinview",
+    "storage_bucket": "otppinview.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:367751058494:android:675861cfdeaf7bb5ff2d6f",
+        "android_client_info": {
+          "package_name": "com.example.otppinview"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "367751058494-er2cl096a6vjtdibcmh5v06gn2hflukr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.otppinview",
+            "certificate_hash": "df0ba0e64c7090e46095cb4602a4d2d2a920cca5"
+          }
+        },
+        {
+          "client_id": "367751058494-lhu2ncdnhbsonjb8pir8nffsd23ka11r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4_DGoKWgM2E5X1Dy6O7D50tqUEgQj99w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "367751058494-lhu2ncdnhbsonjb8pir8nffsd23ka11r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
