@@ -18,6 +18,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
+import com.hbb20.CountryCodePicker;
 
 import java.util.concurrent.TimeUnit;
 
@@ -30,22 +31,31 @@ public class MainActivity extends AppCompatActivity {
     public PhoneAuthProvider.ForceResendingToken mResendToken;
     FirebaseAuth mAuth;
 
+    CountryCodePicker ccp;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
         submit = findViewById(R.id.submit_button);
-
-
         mAuth = FirebaseAuth.getInstance();
-
         phoneNumber =findViewById(R.id.number_edit_text);
+
+        ccp = findViewById(R.id.ccp);
+        ccp.registerCarrierNumberEditText(phoneNumber);
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String number = phoneNumber.getText().toString();
+
+                //phoneNumber.getText().toString();
+                String number = ccp.getFullNumberWithPlus();
+
 
                 if(TextUtils.isEmpty(number)){
                     Toast.makeText(MainActivity.this, "Please enter a phone number first", Toast.LENGTH_SHORT).show();
@@ -76,6 +86,9 @@ public class MainActivity extends AppCompatActivity {
             public void onVerificationCompleted(PhoneAuthCredential credential) {
 
                 signInWithPhoneAuthCredential(credential);
+
+
+
             }
 
             @Override
@@ -107,10 +120,16 @@ public class MainActivity extends AppCompatActivity {
         };
 
     }
+
+
     public static void signInWithPhoneAuthCredential(PhoneAuthCredential credential) {
+
+
+
         Log.e("verification","successful");
 
     }
+
 
 
 

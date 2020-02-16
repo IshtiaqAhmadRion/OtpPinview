@@ -4,28 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
+    android:background="@color/yellow"
     android:orientation="vertical"
     tools:context=".PinViewActivity">
 
     <!--app:pinBackground="#2196F3"-->
 
+    <TextView
+        android:layout_width="match_parent"
+        android:text="Verifying Your number !"
+        android:textSize="20sp"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/roboto"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:text="We have sent an OTP on your number"
+        android:textSize="16sp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/roboto"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"/>
+
     <com.goodiebag.pinview.Pinview
         android:id="@+id/pinview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+
         app:pinWidth="40dp"
         app:pinHeight="40dp"
         app:pinLength="6"
         app:cursorVisible="false"
         app:forceKeyboard="true"
-        app:hint="0"
-        app:inputType="text"
+        app:inputType="number"
         app:password="false"/>
+
     <Button
         android:layout_width="wrap_content"
         android:text="Verify"
         android:textAllCaps="false"
+        android:layout_marginTop="30dp"
         android:textAlignment="center"
         android:layout_gravity="center"
         android:id="@+id/verify_button"
