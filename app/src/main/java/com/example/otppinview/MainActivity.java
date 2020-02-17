@@ -47,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
                 String number = ccp.getFullNumberWithPlus();
                 String num = phoneNumber.getText().toString();
 
+
+
                 if(TextUtils.isEmpty(num)){
                     Toast.makeText(MainActivity.this, "Please enter a phone number first", Toast.LENGTH_SHORT).show();
                 }

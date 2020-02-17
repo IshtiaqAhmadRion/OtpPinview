@@ -50,7 +50,7 @@ public class PinViewActivity<mCallbacks> extends AppCompatActivity {
         String num = getIntent().getStringExtra("num");
 
 
-        sendVerificationCode();
+        sendVerificationCode(num);
 
         pin.setPinViewEventListener(new Pinview.PinViewEventListener() {
             @Override
@@ -81,7 +81,11 @@ public class PinViewActivity<mCallbacks> extends AppCompatActivity {
 
     }
 
-    private void sendVerificationCode() {
+    private void verifyCode(String code){
+
+    }
+
+    private void sendVerificationCode(String num) {
 
 
         String number = getIntent().getStringExtra("number");
@@ -100,7 +104,9 @@ public class PinViewActivity<mCallbacks> extends AppCompatActivity {
             mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
         @Override
         public void onVerificationCompleted(PhoneAuthCredential phoneAuthCredential) {
-            //String code = phoneAuthCredential.getSmsCode();
+             String code = phoneAuthCredential.getSmsCode();
+             signInWithPhoneAuthCredential(phoneAuthCredential);
+
 
 
         }

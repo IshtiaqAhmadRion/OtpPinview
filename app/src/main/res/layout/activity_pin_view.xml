@@ -46,6 +46,7 @@
     <Button
         android:layout_width="wrap_content"
         android:text="Verify"
+        android:fontFamily="@font/roboto"
         android:textAllCaps="false"
         android:layout_marginTop="30dp"
         android:textAlignment="center"
