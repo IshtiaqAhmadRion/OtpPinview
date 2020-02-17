@@ -26,24 +26,15 @@ public class MainActivity extends AppCompatActivity {
 
     Button submit;
     EditText phoneNumber;
-    public PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
-    public static String mVerificationId;
-    public PhoneAuthProvider.ForceResendingToken mResendToken;
-    FirebaseAuth mAuth;
 
     CountryCodePicker ccp;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
         submit = findViewById(R.id.submit_button);
-        mAuth = FirebaseAuth.getInstance();
         phoneNumber =findViewById(R.id.number_edit_text);
 
         ccp = findViewById(R.id.ccp);
@@ -53,84 +44,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                //phoneNumber.getText().toString();
                 String number = ccp.getFullNumberWithPlus();
+                String num = phoneNumber.getText().toString();
 
-
-                if(TextUtils.isEmpty(number)){
+                if(TextUtils.isEmpty(num)){
                     Toast.makeText(MainActivity.this, "Please enter a phone number first", Toast.LENGTH_SHORT).show();
                 }
                 else {
-
-                    PhoneAuthProvider.getInstance().verifyPhoneNumber(
-                            number,        // Phone number to verify
-                            60,                 // Timeout duration
-                            TimeUnit.SECONDS,   // Unit of timeout
-                            MainActivity.this,               // Activity (for callback binding)
-                            mCallbacks);        // OnVerificationStateChangedCallbacks
-
                     Intent intent = new Intent(MainActivity.this,PinViewActivity.class);
-
-
+                    intent.putExtra("number",number);
+                    intent.putExtra("num", num);
                     startActivity(intent);
-
                 }
 
             }
         });
 
-
-        mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
-
-            @Override
-            public void onVerificationCompleted(PhoneAuthCredential credential) {
-
-                signInWithPhoneAuthCredential(credential);
-
-
-
-            }
-
-            @Override
-            public void onVerificationFailed(FirebaseException e) {
-
-
-                if (e instanceof FirebaseAuthInvalidCredentialsException) {
-
-
-                } else if (e instanceof FirebaseTooManyRequestsException) {
-
-
-                }
-
-
-            }
-
-            @Override
-            public void onCodeSent(@NonNull String verificationId,
-                                   @NonNull PhoneAuthProvider.ForceResendingToken token) {
-
-                mVerificationId = verificationId;
-                mResendToken = token;
-
-                Log.e("code","sent");
-
-
-            }
-        };
-
     }
-
-
-    public static void signInWithPhoneAuthCredential(PhoneAuthCredential credential) {
-
-
-
-        Log.e("verification","successful");
-
-    }
-
-
-
 
 }
