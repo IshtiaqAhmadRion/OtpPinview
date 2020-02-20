@@ -6,4 +6,6 @@
 
 
     <color name="yellow">#FFDC34</color>
+    <color name="black">#2D2D2D</color>
+    <color name="white">#FAFAFA</color>
 </resources>

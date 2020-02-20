@@ -33,6 +33,11 @@ dependencies {
     implementation 'com.github.GoodieBag:Pinview:v1.4'
     implementation 'com.hbb20:ccp:2.1.9'
 
+    implementation 'com.google.android.material:material:1.1.0'
+
+
+
+
 
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 

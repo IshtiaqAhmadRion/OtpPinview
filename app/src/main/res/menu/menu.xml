@@ -1,20 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
 
-    <item
-        android:title="Favorite Buyer"
-        android:id="@+id/favorite_buyer"/>
-    <item
-        android:title="Settings"
-        android:id="@+id/settings"/>
-    <item
-        android:title="Report Problem"
-        android:id="@+id/report_problem"/>
-    <item
-        android:title="Help Line"
-        android:id="@+id/help_line"/>
+    >
 
-    <item
-        android:title="Log Out"
-        android:id="@+id/logout"/>
+    <group android:checkableBehavior="single">
+
+        <item
+            android:title="Favorite Buyer"
+            android:id="@+id/favorite_buyer"/>
+        <item
+            android:title="Settings"
+            android:icon="@drawable/ic_settings_black_24dp"
+            android:id="@+id/settings"/>
+        <item
+            android:title="Report Problem"
+            android:id="@+id/report_problem"/>
+        <item
+            android:title="Help Line"
+            android:id="@+id/help_line"/>
+
+        <item
+            android:title="Log Out"
+            android:id="@+id/logout"/>
+
+    </group>
+
 </menu>

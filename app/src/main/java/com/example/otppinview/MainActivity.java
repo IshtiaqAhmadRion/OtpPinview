@@ -53,6 +53,14 @@ public class MainActivity extends AppCompatActivity {
         ccp = findViewById(R.id.ccp);
         ccp.registerCarrierNumberEditText(phoneNumber);
 
+
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
         if(currentUser == null){
             submit.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -82,12 +90,9 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-
-
-
     }
 
-//    @Override
+    //    @Override
 //    protected void onStart() {
 //        super.onStart();
 //
