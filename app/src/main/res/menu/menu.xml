@@ -8,20 +8,26 @@
 
         <item
             android:title="Favorite Buyer"
+            android:icon="@drawable/ic_favorite_black_24dp"
             android:id="@+id/favorite_buyer"/>
         <item
             android:title="Settings"
             android:icon="@drawable/ic_settings_black_24dp"
-            android:id="@+id/settings"/>
+            android:id="@+id/settings"
+
+            />
         <item
             android:title="Report Problem"
+            android:icon="@drawable/ic_report_problem_black_24dp"
             android:id="@+id/report_problem"/>
         <item
             android:title="Help Line"
+            android:icon="@drawable/ic_help_black_24dp"
             android:id="@+id/help_line"/>
 
         <item
             android:title="Log Out"
+            android:icon="@drawable/log_out"
             android:id="@+id/logout"/>
 
     </group>
