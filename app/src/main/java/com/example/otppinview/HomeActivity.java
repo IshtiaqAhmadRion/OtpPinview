@@ -21,14 +21,15 @@ import com.google.firebase.auth.PhoneAuthCredential;
 
 public class HomeActivity extends AppCompatActivity {
 
-    ListView listView;
+    //ListView listView;
     DrawerLayout drawerLayout;
     ImageButton nav_button;
 
     String options[];
+
     int[] icon ={R.drawable.ic_favorite_black_24dp,R.drawable.ic_settings_black_24dp,
                  R.drawable.ic_report_problem_black_24dp,R.drawable.ic_help_black_24dp,
-                 R.drawable.log_out};
+                 R.drawable.logout_2};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,13 +37,9 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         drawerLayout = findViewById(R.id.drawer_layout);
-        listView = findViewById(R.id.list_view_option);
+//        listView = findViewById(R.id.list_view_option);
 
         options = getResources().getStringArray(R.array.options);
-
-
-        CustomAdapter adapter = new CustomAdapter(this,options,icon);
-        listView.setAdapter(adapter);
 
         nav_button=findViewById(R.id.navigation_image);
         nav_button.setOnClickListener(new View.OnClickListener() {
@@ -55,6 +52,13 @@ public class HomeActivity extends AppCompatActivity {
                     drawerLayout.openDrawer(Gravity.LEFT);
             }
         });
+
+
+
+        CustomAdapter adapter = new CustomAdapter(this,options,icon);
+//        listView.setAdapter(adapter);
+
+//
 
 
 

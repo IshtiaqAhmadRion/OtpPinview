@@ -16,11 +16,11 @@ class CustomAdapter extends BaseAdapter {
     Context context;
     private LayoutInflater inflater;
 
-    CustomAdapter(Context context,String[] options, int[] icon){
+    CustomAdapter(Context con,String[] opt, int[] ic){
 
-        this.context = context;
-        this.options = options;
-        this.icon = icon;
+        context = con;
+        options = opt;
+        icon = ic;
     }
 
     @Override
