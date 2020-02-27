@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
@@ -21,15 +22,8 @@ import com.google.firebase.auth.PhoneAuthCredential;
 
 public class HomeActivity extends AppCompatActivity {
 
-    //ListView listView;
     DrawerLayout drawerLayout;
     ImageButton nav_button;
-
-    String options[];
-
-    int[] icon ={R.drawable.ic_favorite_black_24dp,R.drawable.ic_settings_black_24dp,
-                 R.drawable.ic_report_problem_black_24dp,R.drawable.ic_help_black_24dp,
-                 R.drawable.logout_2};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,11 +31,8 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         drawerLayout = findViewById(R.id.drawer_layout);
-//        listView = findViewById(R.id.list_view_option);
-
-        options = getResources().getStringArray(R.array.options);
-
         nav_button=findViewById(R.id.navigation_image);
+
         nav_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,17 +45,23 @@ public class HomeActivity extends AppCompatActivity {
         });
 
 
-
-        CustomAdapter adapter = new CustomAdapter(this,options,icon);
-//        listView.setAdapter(adapter);
-
-//
+    }
 
 
+    public void sendToFavoriteActivity(View view) {
+        Intent intent = new Intent(this,FavoriteActivity.class);
+        startActivity(intent);
 
 
     }
 
+    public void sendToSettingsActivity(View view) {
+        Intent intent = new Intent(this,SettingsActivity.class);
+        startActivity(intent);
+    }
 
-
+    public void sendToReportActivity(View view) {
+//        Intent intent = new Intent(this,ReportActivity.class);
+//        startActivity(intent);
+    }
 }

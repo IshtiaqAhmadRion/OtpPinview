@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".DeleteActivity">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageButton
+            android:id="@+id/report_back_button"
+            android:layout_width="19dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/arrow_back"
+            android:layout_marginLeft="20dp"
+            />
+
+
+
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="108dp"
+            android:layout_gravity="center"
+            android:src="@drawable/sad_emoji"
+            android:layout_marginTop="50dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/roboto"
+            android:text="@string/delete_account"
+            android:textColor="#2d2d2d"
+            android:textSize="14sp"
+            android:layout_marginTop="50dp"
+             />
+
+
+        <TextView
+
+            android:layout_width="289dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/roboto"
+            android:text="@string/apply_to_you"
+            android:textAlignment="center"
+            android:textColor="#2d2d2d"
+            android:textSize="10sp"
+            android:layout_marginTop="10dp"
+            />
+
+        <Button
+            android:layout_width="108dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center"
+            android:background="@drawable/report_button_background"
+            android:fontFamily="@font/roboto"
+            android:text="Delete"
+            android:id="@+id/delete_button"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:layout_marginBottom="20dp"
+            android:textStyle="bold"
+            android:layout_marginTop="100dp"
+            />
+
+
+        <Button
+            android:layout_width="108dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center"
+            android:background="@drawable/report_button_background"
+            android:fontFamily="@font/roboto"
+            android:text="Close"
+            android:id="@+id/close_button"
+            android:onClick="sendToHomeActivity"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"
+
+            />
+
+    </LinearLayout>
+</ScrollView>
+
+</LinearLayout>

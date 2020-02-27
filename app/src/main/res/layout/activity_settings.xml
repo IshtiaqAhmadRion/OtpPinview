@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#fafafa"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity">
+
+    <include
+        android:id="@+id/settings_toolbar"
+        layout="@layout/settings_toolbar"
+        />
+
+       <androidx.cardview.widget.CardView
+           android:layout_width="match_parent"
+           android:id="@+id/profile_settings_card"
+           app:cardCornerRadius="10dp"
+           android:layout_marginStart="20dp"
+           android:layout_marginEnd="20dp"
+           android:layout_marginBottom="10dp"
+           android:layout_marginTop="15dp"
+
+           app:cardElevation="20dp"
+           app:cardBackgroundColor="#fff"
+           android:layout_height="60dp">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="10dp"
+               android:layout_gravity="center"
+               android:orientation="horizontal">
+               <ImageView
+                   android:layout_width="27dp"
+                   android:layout_height="50dp"
+                   android:src="@drawable/profile_settings" />
+
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/profile_settings_linear_layout"
+                   android:layout_gravity="center"
+                   android:layout_marginLeft="10dp"
+                   android:layout_weight="1"
+                   android:orientation="vertical">
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="@font/roboto"
+                       android:textStyle="bold"
+                       android:textColor="#2d2d2d"
+                       android:text="Profile Settings"
+                       android:textAlignment="center"
+                       android:textSize="20sp" />
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="@font/roboto"
+                       android:textColor="#a8a8a8"
+                       android:text="Edit Your profile or add information"
+                       android:textAlignment="center"
+                       android:textSize="12sp" />
+               </LinearLayout>
+
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_gravity="center_vertical"
+                   android:layout_marginEnd="10dp"
+                   android:id="@+id/porfile_settings_arrow"
+                   android:src="@drawable/ic_arrow_right_black_24dp"
+                   android:layout_height="wrap_content"/>
+
+           </LinearLayout>
+
+
+       </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:cardCornerRadius="10dp"
+        android:layout_marginStart="20dp"
+        android:id="@+id/number_change_card"
+
+        android:layout_marginEnd="20dp"
+        app:cardElevation="20dp"
+        app:cardBackgroundColor="#fff"
+        android:layout_height="60dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="27dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_tablet_mac_black_24dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/number_change_linear_layout"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:textStyle="bold"
+                    android:textColor="#2d2d2d"
+                    android:text="Number change"
+                    android:textAlignment="center"
+                    android:textSize="20sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="#a8a8a8"
+                    android:text="Change your mobile number in your account"
+                    android:textAlignment="center"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="10dp"
+                android:id="@+id/number_change_arrow"
+                android:src="@drawable/ic_arrow_right_black_24dp"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/language_settings_card"
+        app:cardCornerRadius="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        app:cardElevation="20dp"
+        app:cardBackgroundColor="#fff"
+        android:layout_height="60dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="27dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_language_black_24dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/language_settings_linear_layout"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:textStyle="bold"
+                    android:textColor="#2d2d2d"
+                    android:text="Language settings"
+                    android:textAlignment="center"
+                    android:textSize="20sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="#a8a8a8"
+                    android:text="Change language in your application          "
+                    android:textAlignment="center"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="10dp"
+                android:id="@+id/language_settings_arrow"
+                android:src="@drawable/ic_arrow_right_black_24dp"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/delete_account_card"
+        android:onClick="sendToDeleteActivity"
+
+        app:cardCornerRadius="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        app:cardElevation="20dp"
+        app:cardBackgroundColor="#fff"
+        android:layout_height="60dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="27dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_delete_black_24dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/delete_linear_layout"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:textStyle="bold"
+                    android:textColor="#2d2d2d"
+                    android:text="Delete Account"
+                    android:textAlignment="center"
+                    android:textSize="20sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="#a8a8a8"
+                    android:text="Remove your account from this application"
+                    android:textAlignment="center"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="10dp"
+                android:id="@+id/delete_arrow"
+                android:src="@drawable/ic_arrow_right_black_24dp"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>

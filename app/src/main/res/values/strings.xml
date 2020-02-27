@@ -17,12 +17,10 @@
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
+    
+    <string name="delete_account">Are you sure you want to delete your account?</string>
+    <string name="apply_to_you">By using or downloading the app,
+        these term will automatically apply to you.</string>
 
-    <string-array name="options">
-        <item>Favorite Buyer</item>
-        <item>Settings</item>
-        <item>Report Problem</item>
-        <item>Help Line</item>
-        <item>Log Out</item>
-    </string-array>
+
 </resources>
