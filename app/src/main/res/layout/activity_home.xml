@@ -35,6 +35,7 @@
                   android:layout_height="70dp"
                   android:layout_marginStart="10dp"
                   android:layout_marginEnd="10dp"
+                  android:onClick="sendToMapActivity"
                   android:layout_marginBottom="5dp"
                   app:cardBackgroundColor="#fff"
                   app:cardCornerRadius="6dp"
@@ -71,6 +72,8 @@
                   android:layout_width="match_parent"
                   android:layout_height="70dp"
                   android:layout_marginStart="10dp"
+                  android:onClick="sendToMapActivity"
+
                   android:layout_marginEnd="10dp"
                   android:layout_marginBottom="5dp"
                   app:cardBackgroundColor="#fff"
@@ -106,6 +109,8 @@
                   android:id="@+id/plastics_card"
                   android:layout_width="match_parent"
                   android:layout_height="70dp"
+                  android:onClick="sendToMapActivity"
+
                   android:layout_marginStart="10dp"
                   android:layout_marginEnd="10dp"
                   android:layout_marginBottom="5dp"
@@ -147,6 +152,8 @@
                   android:id="@+id/metals_card"
                   android:layout_width="match_parent"
                   android:layout_height="70dp"
+                  android:onClick="sendToMapActivity"
+
                   android:layout_marginStart="10dp"
                   android:layout_marginEnd="10dp"
                   android:layout_marginBottom="5dp"

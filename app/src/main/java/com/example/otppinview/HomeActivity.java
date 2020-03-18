@@ -64,4 +64,9 @@ public class HomeActivity extends AppCompatActivity {
 //        Intent intent = new Intent(this,ReportActivity.class);
 //        startActivity(intent);
     }
+
+    public void sendToMapActivity(View view) {
+        Intent intent = new Intent(this,MapsActivity.class);
+        startActivity(intent);
+    }
 }
